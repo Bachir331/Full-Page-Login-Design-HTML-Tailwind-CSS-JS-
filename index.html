@@ -2,20 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page Login</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap");
+      @layer base {
+        .font-space-grotesk {
+          font-family: "Space Grotesk", sans-serif; /* Specify the font family */
+        }
+      }
+    </style>
   </head>
   <!-- Body Page -->
   <body
-    class="flex items-center justify-center h-screen w-screen font-mono box-content"
+    class="flex items-center justify-center sh-screen w-screen font-space-grotesk box-content"
   >
     <!-- Section Login Panel -->
-    <div class="flex w-full justify-center">
-      <span
-        class="w-5/6 h-4/5 rounded-lg shadow-2xl flex justify-center items-center object-contain p-5"
-      >
+    <div class="flex w-full h-screen items-center justify-center">
+      <span class="w-11/12 shadow-2xl flex justify-center items-center sm:p-5">
         <!-- Image -->
         <div class="hidden sm:hidden justify-center lg:flex w-5/6">
           <img
@@ -25,19 +30,21 @@
           />
         </div>
         <!-- Form Login elemets  -->
-        <div class="w-full flex justify-center items-center">
-          <div class="sm:w-2/3 flex flex-col items-center justify-center gap-5">
+        <div class="w-full h-full flex justify-center items-center">
+          <div
+            class="sm:w-6/12 flex flex-col items-center gap-5 justify-center p-5"
+          >
             <!-- Title Welcome -->
-            <div class="Title flex flex-col items-center justify-center">
-              <h1 class="font-bold text-[36px] uppercase text-orange-400">
+            <div class="Title flex w-full flex-col items-center justify-center">
+              <h1 class="font-bold text-[32px] uppercase text-orange-400">
                 Welcome Back
               </h1>
-              <p class="font-light text-zinc-400 text-[14px]">
+              <p class="font-light text-zinc-400 text-sm">
                 Please Login to your account
               </p>
             </div>
             <!-- Inputs / Button -->
-            <form class="Input flex flex-col w-4/5 p-2 gap-5">
+            <form class="flex flex-col sm:w-full p-2 gap-5">
               <input
                 type="text"
                 placeholder="E-mail"
@@ -81,7 +88,7 @@
                 </span>
               </div>
               <a href="forgot_password.html"
-                ><p class="font-light text-zinc-400 text-[15px]">
+                ><p class="font-light text-zinc-400 text-sm">
                   Forgot your password??
                 </p>
               </a>
@@ -97,18 +104,16 @@
 
               <!-- Section Or  -->
               <div
-                class="justify-around flex w-full h-px justify-center items-center"
+                class="justify-between flex w-full h-px justify-center items-center"
               >
                 <div class="bg-gray-400 min-w-24 h-px"></div>
-                <p class="uppercase font-medium text-zinc-500 text-[16px]">
-                  or
-                </p>
+                <p class="uppercase font-medium text-zinc-500 text-base">or</p>
                 <div class="bg-gray-400 min-w-24 h-px"></div>
               </div>
             </form>
 
             <!-- Login with Google /GIThub  -->
-            <div class="w-5/6">
+            <div class="w-full">
               <form class="flex justify-around">
                 <!-- Google Button -->
                 <button
@@ -166,11 +171,9 @@
               </form>
             </div>
             <!-- don't have any account Section -->
-            <p class="text-zinc-400 text-[14px]">
+            <p class="text-zinc-400 text-[12px]">
               Don't have an account ?
-              <a
-                href="http://127.0.0.1:5500/index.html"
-                class="text-red-400 underline underline-offset-4"
+              <a href="#" class="text-red-400 underline underline-offset-4"
                 >Click here</a
               >
             </p>
